@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_color">#FFFFFF</color> <!-- 연핑크 배경 -->
+    <color name="button_color">#C7C7C7</color> <!-- 진핑크 버튼 -->
+    <color name="accent_color">#009688</color> <!-- 밝은 핑크 포인트 -->
+    <color name="text_color">#2C2B2B</color> <!-- 흰색 텍스트 -->
+</resources>
+
+

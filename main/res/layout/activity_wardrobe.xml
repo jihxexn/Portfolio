@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- 배경 이미지 (맨 아래 레이어) -->
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/bg_ocean"
+        android:contentDescription="배경 이미지" />
+
+
+    <!-- 돌 이미지 (중앙) -->
+    <ImageView
+        android:id="@+id/stoneImage"
+        android:layout_width="191dp"
+        android:layout_height="196dp"
+        android:layout_alignTop="@id/bgImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:src="@drawable/stone_default"
+        android:contentDescription="돌 이미지" />
+
+    <!-- 악세사리 이미지 (돌 위에 겹치게) -->
+    <ImageView
+        android:id="@+id/accessoryImage"
+        android:layout_width="191dp"
+        android:layout_height="196dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/stoneImage"
+        android:src="@android:color/transparent"
+        android:contentDescription="악세사리 이미지" />
+
+    <!-- 적용 및 초기화 버튼 -->
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="63dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        app:icon="@android:drawable/ic_popup_sync"
+        android:contentDescription="초기화 버튼" />
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bgImage"
+        android:layout_marginTop="-46dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/applyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="적용" />
+
+    </LinearLayout>
+
+    <!-- 탭 선택 버튼 -->
+    <LinearLayout
+        android:id="@+id/tabLayout"
+        android:layout_below="@id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/tabAccessory"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="악세서리" />
+
+        <Button
+            android:id="@+id/tabBackground"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="배경" />
+
+        <Button
+            android:id="@+id/tabStone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="돌 종류" />
+    </LinearLayout>
+
+    <!-- 아이템 리스트 그리드 -->
+    <GridView
+        android:id="@+id/gridItems"
+        android:layout_width="wrap_content"
+        android:layout_height="305dp"
+        android:layout_below="@id/tabLayout"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:horizontalSpacing="8dp"
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="8dp" />
+
+    <!-- 하단 메뉴 버튼 -->
+    <LinearLayout
+        android:id="@+id/bottomMenuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/shopButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="상점" />
+
+        <Button
+            android:id="@+id/diaryButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="일기장" />
+
+        <Button
+            android:id="@+id/wardrobeButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="메인화면" />
+    </LinearLayout>
+
+</RelativeLayout>
+

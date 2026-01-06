@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:padding="16dp">
+
+    <!-- 배경 이미지 전체화면 적용 -->
+    <ImageView
+        android:id="@+id/stoneBackgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_ocean" />
+
+    <!-- 상단바 -->
+    <LinearLayout
+        android:id="@+id/topStatusBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:paddingHorizontal="12dp">
+
+        <Button
+            android:id="@+id/wardrobeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="옷장" />
+
+        <TextView
+            android:id="@+id/levelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Level 1"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:id="@+id/coinText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coins: 0"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+
+    <!-- 배고픔 바 -->
+    <ProgressBar
+        android:id="@+id/hungerBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topStatusBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:max="100"
+        android:progress="100"/>
+
+    <!-- 경험치 바 -->
+    <ProgressBar
+        android:id="@+id/expBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hungerBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:max="100"
+        android:progress="0"/>
+
+    <!-- 캐릭터 -->
+    <ImageView
+        android:id="@+id/stoneImage"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/stone_default" />
+
+    <!-- 장착 아이템 -->
+    <ImageView
+        android:id="@+id/stoneItemImage"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <!-- 하단 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/feedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:text="먹이주기"
+            android:layout_margin="2dp"/>
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:text="놀아주기"
+            android:layout_margin="2dp"/>
+
+        <Button
+            android:id="@+id/shopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:text="상점"
+            android:layout_margin="2dp"/>
+
+        <Button
+            android:id="@+id/diaryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:text="일기장"
+            android:layout_margin="2dp"/>
+    </LinearLayout>
+</RelativeLayout>
